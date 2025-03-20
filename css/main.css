@@ -1,0 +1,63 @@
+/* Resetando margens e paddings para evitar inconsistências */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Estilo das janelas dos laboratórios */
+.laboratorio {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo das imagens dentro das janelas */
+.laboratorio img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Estilo dos títulos dos laboratórios */
+.laboratorio h3 {
+    font-size: 18px;
+    margin: 15px 0 10px;
+}
+
+/* Estilo do botão */
+.laboratorio button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Efeito de hover para o botão */
+.laboratorio button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade: ajusta para 1 coluna em telas menores */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+    }
+}

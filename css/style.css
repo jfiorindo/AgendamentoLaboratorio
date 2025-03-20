@@ -1,0 +1,84 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+div{
+    background-color: rgba(77, 77, 77, 0.74);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: white;
+}
+
+input{
+    border-radius: 5px;
+    padding: 20px;
+    border:none;
+    outline: none;
+    font-size:15px ;
+
+}
+
+.buttonEntrar{
+    background-color: rgba(255, 102, 0, 0.74);
+    color:aliceblue;
+    border: 5px;
+    padding: 20px;
+    border-radius: 20px;
+    outline: none;
+    width: 100%;
+    font-size:20px ;
+}
+
+.buttonCadastrar {
+    background-color: rgba(0, 102, 255, 0.74);
+    color: aliceblue;
+    border: 5px;
+    padding: 20px;
+    border-radius: 20px;
+    outline: none;
+    width: 50%;
+    font-size: 15px;    
+    margin-top: 15px;
+    display: block; /* Faz o botão se comportar como um bloco */
+    margin-left: auto; /* Centraliza o botão à esquerda */
+    margin-right: auto; /* Centraliza o botão à direita */
+}
+
+
+header {
+    background-color: rgba(255, 102, 0, 0.74);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    height: 15vh;
+    display: flex;
+    flex-direction: column; /* Organiza os itens de cima para baixo */
+    justify-content: center; /* Alinha verticalmente */
+    align-items: center; /* Alinha horizontalmente */
+    border-radius: 20px;
+    padding: 0 20px; /* Adiciona um pouco de espaçamento lateral */
+}
+
+.h2 {
+    font-size: 50px;
+    font-weight: 900; /* Fonte mais gorda */
+    margin: 0;
+}
+
+.h4 {
+    font-size: 30px; /* Tamanho menor para o h4 */
+    font-weight: 500; /* Menos grosso que o h2 */
+    margin: 0;
+    margin-top: 5px; /* Um pequeno espaçamento entre os dois */
+}
+
+.centraltext{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+}
