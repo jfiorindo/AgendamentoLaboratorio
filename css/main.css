@@ -1,31 +1,24 @@
-/* Resetando margens e paddings para evitar inconsistências */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilo do body */
 body {
     font-family: Arial, sans-serif;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
-    gap: 20px; /* Espaçamento entre os itens */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #ffffff; /* Fundo branco como no primeiro */
 }
 
 /* Estilo das janelas dos laboratórios */
 .laboratorio {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: rgba(77, 77, 77, 0.74); /* fundo escuro semitransparente */
+    border: none;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    color: white; /* texto branco como nos cards do primeiro estilo */
 }
 
-/* Estilo das imagens dentro das janelas */
+/* Estilo das imagens */
 .laboratorio img {
     width: 100%;
     height: 150px;
@@ -33,31 +26,33 @@ body {
     border-radius: 8px;
 }
 
-/* Estilo dos títulos dos laboratórios */
+/* Título dos laboratórios */
 .laboratorio h3 {
     font-size: 18px;
     margin: 15px 0 10px;
+    color: white; /* texto claro */
 }
 
-/* Estilo do botão */
+/* Botão */
 .laboratorio button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007BFF;
+    background-color: rgba(255, 102, 0, 0.9); /* cor laranja vibrante */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Efeito de hover para o botão */
+/* Hover no botão */
 .laboratorio button:hover {
-    background-color: #0056b3;
+    background-color: rgba(0, 102, 255, 0.74) /* mais intenso no hover */
 }
 
-/* Responsividade: ajusta para 1 coluna em telas menores */
+/* Responsividade */
 @media (max-width: 768px) {
     body {
-        grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+        grid-template-columns: 1fr;
     }
 }

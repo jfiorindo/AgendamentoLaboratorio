@@ -11,15 +11,20 @@
 <body>
     <header>
         <h2 class="h2">Agendamento de laboratório</h2>
-        <h4 class="h4">Faculdade Anhanguera</h4>
+        <h4 class="h4"> Faculdade Anhanguera</h4>
     </header>
     <div>
         <h1 class="centraltext">Entrar</h1>
-        <input type="text" placeholder="Nome"> </br> </br>
-        <input type="password" placeholder="Senha"> </br> </br>
-        <a href="main.html">
-            <button class="buttonEntrar">Entrar</button>
-        </a>
+       <form action="main.html" method="get">
+    <label for="nome">Nome</label><br>
+    <input type="text" id="nome" name="nome" placeholder="Nome" required autocomplete="username"><br><br>
+
+    <label for="senha">Senha</label><br>
+    <input type="password" id="senha" name="senha" placeholder="Senha" required autocomplete="current-password"><br><br>
+
+    <button type="submit" class="buttonEntrar">Entrar</button>
+</form>
+
     </div>
 </body>
 </html>

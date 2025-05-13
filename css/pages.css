@@ -1,40 +1,36 @@
-/* Resetando margens e paddings para evitar inconsistências */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Estilo do body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff; /* Fundo branco */
+    color: #2c3e50; /* Azul escuro suave */
     line-height: 1.6;
     padding: 20px;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #007BFF;
+    background-color: rgba(0, 102, 204, 0.9); /* Azul principal */
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    border-radius: 20px;
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 0;
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 0 80px;
 }
 
 header nav ul li a {
@@ -47,41 +43,47 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Estilo da seção do laboratório */
+/* Seção do laboratório */
 .info-laboratorio {
     margin-top: 20px;
 }
 
-/* Descrição do laboratório */
+/* Descrição */
 .descricao {
     margin-bottom: 30px;
+    background-color: rgba(240, 248, 255, 0.95); /* Azul claro translúcido */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .descricao h2 {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 10px;
+    color: #2c3e50;
 }
 
 .descricao p {
     font-size: 16px;
-    line-height: 1.5;
+    color: #2c3e50;
 }
 
-/* Estilo do calendário */
+/* Calendário */
 .calendario {
-    background-color: white;
+    background-color: rgba(240, 248, 255, 0.95);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    color: #2c3e50;
 }
 
 .calendario h2 {
     font-size: 22px;
     margin-bottom: 15px;
     text-align: center;
+    color: #2c3e50;
 }
 
-/* Estilo do contêiner do calendário */
 .calendar-container {
     overflow-x: auto;
     max-width: 100%;
@@ -89,51 +91,62 @@ header nav ul li a:hover {
     justify-content: center;
 }
 
-/* Estilo da tabela do calendário */
+/* Tabela */
 table {
     width: 100%;
     border-collapse: collapse;
-}
-
-table th, table td {
-    padding: 10px;
-    text-align: center;
-    width: 14.28%; /* Cada célula terá a mesma largura */
+    color: #2c3e50;
 }
 
 table th {
-    background-color: #007BFF;
+    background-color: rgba(0, 102, 204, 0.9); /* Azul principal */
     color: white;
+    padding: 12px;
+    font-weight: bold;
 }
 
 table td {
-    background-color: #f9f9f9;
+    padding: 12px;
+    text-align: center;
+    background-color: #ffffff;
     font-size: 16px;
+    border: 1px solid #e0e0e0;
 }
 
-/* Estilo para os dias disponíveis */
+/* Disponíveis */
 table td.available {
-    background-color: #28a745;
+    background-color: rgba(0, 102, 204, 0.9);
     color: white;
+    font-weight: bold;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 table td.available:hover {
-    background-color: #218838;
+    background-color: rgba(0, 102, 204, 0.7);
 }
 
-/* Estilo para os dias indisponíveis */
+/* Indisponíveis */
 table td.unavailable {
-    background-color: #dc3545;
-    color: white;
+    background-color: #f0f8ff;
+    color: rgba(0, 102, 204, 0.9);
+    border: 2px solid rgba(0, 102, 204, 0.3);
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 /* Rodapé */
 footer {
-    text-align: center;
-    margin-top: 30px;
-    padding: 10px;
-    background-color: #007BFF;
+    background-color: rgba(0, 102, 204, 0.9);
     color: white;
-    font-size: 14px;
+    text-align: center;
+    padding: 10px 5px;
+    margin-top: 40px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.voltar-link::before {
+    content: "←";
+    margin-right: 8px;
+    font-size: 18px;
 }
