@@ -6,29 +6,34 @@ from bson import ObjectId
 app = Flask(__name__)
 CORS(app)
 
-# Conecta ao MongoDB local
+# Conexão com MongoDB local
 client = MongoClient("mongodb://localhost:27017")
-db = client["agendamento_lab"]
+db = client["AgendamentoLaboratorio"]
 usuarios_collection = db["usuarios"]
 
 @app.route("/login", methods=["POST"])
 def login():
     data = request.get_json()
-    print("Recebido:", data)  # 🔍 veja o que o JS está mandando
+    print("🔎 Recebido do front-end:", data)
 
-    nome = data.get("nome")
-    senha = data.get("senha")
+    nome = str(data.get("nome", "")).strip()
+    senha = str(data.get("senha", "")).strip()
 
-    usuario = usuarios_collection.find_one({"nome": nome, "senha": senha})
-    print("Usuário encontrado:", usuario)  # 🔍 veja se achou
+    usuario = usuarios_collection.find_one({
+        "nome": nome,
+        "senha": senha
+    })
+
+    print("🔍 Resultado da busca:", usuario)
 
     if usuario:
         return jsonify({
             "mensagem": "Login bem-sucedido",
             "usuario_id": str(usuario["_id"]),
             "nome": usuario["nome"]
-        })
+        }), 200
     else:
         return jsonify({"mensagem": "Usuário ou senha incorretos"}), 401
+
 if __name__ == "__main__":
     app.run(debug=True)

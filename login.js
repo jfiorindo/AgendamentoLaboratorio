@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             sessionStorage.setItem("usuario_id", data.usuario_id);
             window.location.href = "main.html";
         } else {
-            alert(data.mensagem);
+            alert(data.mensagem); // ou exibir no HTML se preferir
         }
     });
 });
